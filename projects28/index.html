@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        .swiper-container { width: 100%; height: 400px; }
+        .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+        .shop-now-button {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .shop-now-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .promo-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            color: white;
+        }
+        .promo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+
+
+        .dropdown-menu { display: none; }
+        .group:hover .dropdown-menu { display: block; }
+        .footer-icon, .social-icon, .policy-icon { 
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; 
+        }
+        .footer-icon:hover, .social-icon:hover, .policy-icon:hover {
+            transform: scale(1.2);
+            color: #ff9800;
+        }
+        .footer-text { transition: color 0.3s ease-in-out; }
+        .footer-text:hover { color: #ff9800; }
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body class="bg-gray-100">
+    
+    <!-- Navbar -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-2 flex items-center justify-between">
+            <div class="flex items-center">
+                <img alt="Flipkart logo" class="h-10" src="https://storage.googleapis.com/a1aa/image/PJuxBSJXzI8rwVmMVPuKuxIP3GpN_mQEVElNs6pjSYE.jpg">
+                <span class="text-sm text-yellow-500 ml-2">Explore <span class="font-bold">Plus</span></span>
+            </div>
+            <div class="flex-grow mx-4">
+                <input class="w-full px-4 py-2 border border-gray-300 rounded" placeholder="Search for Products, Brands and More" type="text">
+            </div>
+            <div class="flex items-center space-x-4">
+                <a class="text-gray-700 hover:text-blue-600" href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
+                <a class="text-gray-700 hover:text-blue-600" href="#"><i class="fas fa-user"></i> Login</a>
+                <a class="text-gray-700 hover:text-blue-600" href="#"><i class="fas fa-store"></i> Become a Seller</a>
+                <a class="text-gray-700 hover:text-blue-600" href="#"><i class="fas fa-headset"></i> Help</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section with Carousel -->
+    <section class="mt-5">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="/images/b1.png" alt="Banner 1"></div>
+                <div class="swiper-slide"><img src="/images/b2.png" alt="Banner 2"></div>
+                <div class="swiper-slide"><img src="/images/b3.png" alt="Banner 3"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div class="text-center mt-5">
+            <h1 class="text-4xl font-bold">Best Deals Await!</h1>
+            <p class="text-lg mt-2">Explore top offers and trending products</p>
+            <button class="shop-now-button mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Shop Now</button>
+        </div>
+    </section>
+    
+    <!-- Promotional Cards -->
+    <section class="container mx-auto px-4 mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="promo-card p-8 rounded-lg shadow-md text-center" style="background-image: url('/images/c1.png');">
+            <h2 class="text-2xl font-bold">Electronics</h2>
+            <p>Latest gadgets at unbeatable prices</p>
+        </div>
+        <div class="promo-card p-8 rounded-lg shadow-md text-center" style="background-image: url('/images/c2.png');">
+            <h2 class="text-2xl font-bold">Fashion</h2>
+            <p>Trendy styles curated for you</p>
+        </div>
+        <div class="promo-card p-8 rounded-lg shadow-md text-center" style="background-image: url('/images/c3.png');">
+            <h2 class="text-2xl font-bold">Home Essentials</h2>
+            <p>Upgrade your living space</p>
+        </div>
+    </section>
+    
+    
+
+
+      <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10 mt-10">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-5 gap-8">
+            <!-- About Us Section -->
+            <div class="md:col-span-2">
+                <h2 class="text-3xl font-bold mb-4 footer-text"><i class="fas fa-info-circle"></i> About Us</h2>
+                <p class="text-lg footer-text leading-relaxed">
+                    Welcome to Flipkart Clone, your one-stop destination for quality shopping. 
+                    We bring convenience, affordability, and a seamless shopping experience.
+                </p>
+            </div>
+
+            <!-- Customer Care -->
+            <div>
+                <h2 class="text-xl font-bold mb-4 footer-text"><i class="fas fa-headset"></i> Customer Care</h2>
+                <ul class="space-y-2">
+                    <li class="footer-text"><i class="fas fa-question-circle mr-2"></i> Help Center</li>
+                    <li class="footer-text"><i class="fas fa-truck mr-2"></i> Track Order</li>
+                    <li class="footer-text"><i class="fas fa-exchange-alt mr-2"></i> Returns & Refunds</li>
+                </ul>
+            </div>
+
+            <!-- Policies -->
+            <div>
+                <h2 class="text-xl font-bold mb-4 footer-text"><i class="fas fa-shield-alt policy-icon"></i> Policies</h2>
+                <ul class="space-y-2">
+                    <li class="footer-text"><i class="fas fa-user-secret mr-2"></i> Privacy Policy</li>
+                    <li class="footer-text"><i class="fas fa-file-contract mr-2"></i> Terms & Conditions</li>
+                    <li class="footer-text"><i class="fas fa-gavel mr-2"></i> Legal Information</li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div>
+                <h2 class="text-xl font-bold mb-4 footer-text"><i class="fas fa-share-alt"></i> Follow Us</h2>
+                <div class="flex space-x-4">
+                    <i class="fab fa-facebook-f social-icon text-2xl cursor-pointer"></i>
+                    <i class="fab fa-twitter social-icon text-2xl cursor-pointer"></i>
+                    <i class="fab fa-instagram social-icon text-2xl cursor-pointer"></i>
+                    <i class="fab fa-youtube social-icon text-2xl cursor-pointer"></i>
+                    <i class="fab fa-linkedin-in social-icon text-2xl cursor-pointer"></i>
+                </div>
+            </div>
+
+            <!-- Payment Methods -->
+            <div>
+                <h2 class="text-xl font-bold mb-4 footer-text"><i class="fas fa-credit-card footer-icon"></i> Payment Methods</h2>
+                <div class="flex space-x-4">
+                    <img class="h-10" src="/images/2.png" alt="UPI">
+                    <img class="h-10" src="/images/4.png" alt="RuPay">
+                    <img class="h-10" src="/images/3.png" alt="Visa">
+                    <img class="h-10" src="/images/5.png" alt="MasterCard">
+                    <img class="h-10" src="/images/4.png" alt="Paytm">
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-10 text-lg footer-text">
+            © 2025 Flipkart Clone. All rights reserved. | Made with ❤️ for an amazing shopping experience!
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: { delay: 3000 },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
+        });
+    </script>
+</body>
+</html>
